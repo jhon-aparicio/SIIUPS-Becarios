@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: sans-serif;
+}  
+nav a{
+    transition: .3s;
+      text-decoration:none;
+      color:inherit;
+      font-size:14px;
+      }
+            
+nav li{
+      display:inline-block;
+      width:150px;
+      padding:5px 10px;
+      background-color:#daa520;
+      border:1px solid #daa520;
+      text-align:center;
+      color:#000000;
+      position:relative;
+}
+            
+nav li:hover{
+      background-color:#daa520;
+      color:#000000;
+      }
+            
+nav li>ul{
+      display:none;
+      }
+
+nav li:hover>ul{
+      display:block;
+      position:absolute;
+      top:30px;
+      left:0px;
+}
