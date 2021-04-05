@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title> Ingresar Persona</title>
+	<title> Inicio Sesion SIIUPS Becarios</title>
 </head>
 <header>
 Bienvenido al Sistema de Gestion de Becarios UPTC Sogamoso
