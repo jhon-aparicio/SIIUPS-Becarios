@@ -33,23 +33,23 @@ $listar=$controlAdministrador->mostrarB();
     </ul></nav>
 	<table border=1>
 		<head>
-                        <td>Codigo</td>
+            <td>Codigo</td>
 			<td>Usuario</td>
 			<td>Nombre</td>
 			<td>Apellido</td>
-                        <td>Horas Realizadas</td>
-                        <td>Horas Totales</td>
+            <td>Horas Realizadas</td>
+            <td>Horas Totales</td>
 			
 		</head>
 		<body>
                     <?php foreach ($listar as $Becario) {?>
 			<tr>
-                            <td><?php echo $Becario->getCodigo()?></td>
-                            <td><?php echo $Becario->getUsuario()?></td>
-                            <td><?php echo $Becario->getNombre()?></td>
-                            <td><?php echo $Becario->getApellido()?></td> 
-                            <td><?php echo $Becario->getHora_R()?></td>
-                            <td><?php echo $Becario->getHoras_H()?></td>
+                <td><?php echo $Becario->getCodigo()?></td>
+                <td><?php echo $Becario->getUsuario()?></td>
+                <td><?php echo $Becario->getNombre()?></td>
+                <td><?php echo $Becario->getApellido()?></td> 
+                <td><?php echo $Becario->getHora_R()?></td>
+                <td><?php echo $Becario->getHoras_H()?></td>
 			</tr>
 			<?php }?>                    
 		</body>
