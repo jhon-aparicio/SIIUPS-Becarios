@@ -23,20 +23,28 @@ if(isset($_POST['insertar'])){
     }else if($user==1){
         header("Location: indexUser.php?id='$usuario'");
     }
-    
-    ?><?php echo $admi ?>
-        <?php echo $user ?><?php
 }
 if(isset($_POST['insertarDependencia'])){
-    
+    //Traemos el nombre que queremos darle a nuestra dependencia
     $nombre_D=$_POST['nombre_D'];
+    //Traemos el nombre del encargado para nuestra dependencia
     $nombre_E=$_POST['nombre_E'];
+    //Realizamos la conexion
     $db= Db::conectar();
+    //Creamos un contador equivalente a 1
     $contador=1;
+    //Realizamos una consulta que nos traiga todas las dependencias
     $select=mysqli_query($db,'SELECT * FROM Dependencia');
+    //Hacemos un while que nos permite saber cuantas dependencias hay para que asi se asigne un 
+    //id consecutivo a nuestra dependencia
     while($RQuery= mysqli_fetch_array($select)){$contador=$contador+1;}
-    $addDep="INSERT INTO `Dependencia` (`Id`, `Nombre_Dependencia`, `Nombre_Encargado`) VALUES ('$contador', '$nombre_D', '$nombre_E');";
+    //Creamos la consulta con los datos que haran parte de la misma
+    $addDep="INSERT INTO `Dependencia` (`Id`, `Nombre_Dependencia`, `Nombre_Encargado`) VALUES ('$contador'
+    , '$nombre_D', '$nombre_E');";
+    //Realizamos la consulta dentro de la base de datos
     mysqli_query($db,$addDep);
+    //Se nos envia a otra clase, mostrar dependencia la cual nos dejara ver como ya nuestra dependencia
+    //esta dentro de la base de datos 
     header('Location: mostrarDependencia.php');
     
 }
