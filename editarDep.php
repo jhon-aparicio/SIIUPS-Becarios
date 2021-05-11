@@ -14,21 +14,22 @@ $dependencia=$controlAdministrador->traerDep($v1);
     </head>
     <body>
         <h1>Añadir Dependencia</h1>
-<nav><ul>
-        <li><a href="#">Becarios</a>
-            <ul><li><a href="añadirBecario.php">Añadir Becario</a></li>
-            <li><a href="editarBecario.php">Editar Becario</a></li>
-            <li><a href="eliminarBecario.php">Eliminar Becario</a></li>
-            <li><a href="mostrarUsuarios.php">Listar Becarios</a></li></ul>
+    <nav class="navbar justify-content-center"><ul>
+        <li class="nav-item dropdown"><a href="#" class="navbar-brand">Becarios</a>
+
+            <ul class="dropdown-menu"><li><a href="añadirBecario.php">Añadir Becario</a></li>
+            <li><a href="editarBecario.php" class="dropdown-item">Editar Becario</a></li>
+            <li><a href="eliminarBecario.php" class="dropdown-item">Eliminar Becario</a></li>
+            <li><a href="mostrarUsuarios.php"class="dropdown-item">Listar Becarios</a></li></ul>
             </li>
-        <li><a href="#">Dependencias</a>
-            <ul><li><a href="añadirDependencia.php">Añadir Dependencia</a></li>
-            <li><a href="editarDependencia.php">Editar Dependencia</a></li>
-            <li><a href="eliminarDependencia.php">Eliminar Dependencia</a></li>
-            <li><a href="mostrarDependencia.php">Listar Dependencias</a></li></ul>
+        <li class="nav-item dropdown"><a href="#" class="navbar-brand">Dependencias</a>
+            <ul class="dropdown-menu"><li><a href="añadirDependencia.php">Añadir Dependencia</a></li>
+            <li><a href="editarDependencia.php" class="dropdown-item">Editar Dependencia</a></li>
+            <li><a href="eliminarDependencia.php" class="dropdown-item">Eliminar Dependencia</a></li>
+            <li><a href="mostrarDependencia.php" class="dropdown-item">Listar Dependencias</a></li></ul>
             </li>
-        <li><a href="validarInformes.php">Validar Informes</a></li>
-            <li><a href="index.php">Cerrar Sesion</a></li>
+        <li><a href="validarInformes.php" class="navbar-brand">Validar Informes</a></li>
+            <li><a href="index.php" class="navbar-brand">Cerrar Sesion</a></li>
     </ul></nav>
         <nav>
             <form action='ingreso.php' method='post'>

@@ -1,6 +1,11 @@
 <html>
     <head>
+        <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	
         <title>Plataforma SIIUPS</title>
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="./css/estilo.css">
     </head>
     <body>
 <?php
@@ -142,12 +147,16 @@ if(isset($_POST['realizarInforme'])){
     $horas=$_POST['horas_H'];
     $i=1;
     $con="INSERT INTO `Informe` (`Id`, `Fecha`, `Detalle`, `Horas_H`, `Estado`, `id_B`) VALUES ($ids, '$fecha', '$detalle', $horas, 'Pendiente', $codigo);";
-    ?><h1> hola<?php echo $con?></h1> <?php
+    ?><h1> Hola<?php echo $con?></h1> <?php
     $insersion= mysqli_query($db, $con);
     header("Location: verInformes.php?id=$usuario");
     
 }
 ?>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script  src="js/jquery.js"></script>
+    <script  src="js/bootstrap.js"></script>
     </body>
 </html>   
 

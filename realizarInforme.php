@@ -12,7 +12,9 @@ $controlUser->inicio($v1);
         
         <meta charset="UTF-8">
         <link rel="stylesheet" href="Recursos/estiloBec.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
         <title>Informe</title>
+
          <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
             <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
             <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -28,12 +30,14 @@ $controlUser->inicio($v1);
         
     </head>
     <body>
+
+        
+        
+
+        <div class="container">
         <h1>Realizar Informe</h1>
         <input type="checkbox" class="menu" id="menu">
         <label class="menus" for="menu">|||</label>
-        <div>
-             
-        </div>
         <div class="Opciones">
             <ul>
                 <a href="verInformacion.php?id=<?php echo $v1 ?>"><li>Información estudiante</li></a>
@@ -46,29 +50,37 @@ $controlUser->inicio($v1);
         </div>
          <nav>
              
-            <form action='ingreso.php?id=<?php echo $v1 ?>' method='post'>
-	<table>
+    <form action='ingreso.php?id=<?php echo $v1 ?>' method='post'>
+	<table class="table">
             <tr>
-                <td>Usuario</td>
-                <td><input type="text" name="usuario" value="<?php echo $v1 ?>"></td>
+                <td>
+                <label for="name" class="form-label">Usuario </label> </td>
+                <td><input type="text" name="usuario" class="form-control" value="<?php echo $v1 ?>"></td>
             </tr>
                 <tr>
-                    <td >Fecha</td>
-                    <td><input autocomplete="off" type="text" name="fecha" id="campofecha"></td>
+                    <td>
+                    <label for="name" class="form-label">Fecha</label></td>
+                    <td><input autocomplete="off"class="form-control" type="text" name="fecha" id="campofecha"></td>
                 </tr>
 		<tr>
-			<td>Detalle</td>
-                        <td><input autocomplete="off" type='text' name='detalle' ></td>
+			<td>
+            <label for="name" class="form-label">Detalle</label></td>
+            <td><input autocomplete="off" class="form-control" type='text' name='detalle' ></td>
 		</tr>
 		<tr>
-			<td>Horas Realizadas </td>
-                        <td><input type='text' name='horas_H' ></td>
+			<td>
+            <label for="name" class="form-label">Horas Realizadas </label> </td>
+            <td><input type='text' class="form-control" name='horas_H' ></td>
 		</tr>
+
 		<input type='hidden' name='realizarInforme' value='realizarInforme'>
 	</table>
-	<input type='submit' value='Guardar'>
+	<input type='submit' class="btn btn-warning" value='Guardar'>
         <a href="indexUser.php">Volver</a>
-</form>            
-        </nav>       
+    </form>            
+        </nav>  
+        </div>
+
+        <script  src="js/bootstrap.js"></script>
     </body>
 </html>

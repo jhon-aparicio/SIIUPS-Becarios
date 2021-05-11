@@ -59,3 +59,19 @@ li:hover{
     border: solid white;
     border-width: 0 .2rem;
 }
+
+body {
+    background: url("duitama.jpg");
+    background-size: 100%;
+}
+
+.nave {
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+.container {
+    text-align: center;
+    background-color: antiquewhite;
+}
+ 

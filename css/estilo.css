@@ -1,0 +1,35 @@
+/*body{
+		background: url("recursos/uptc.jpg");
+		background-size:100%;
+}
+header {
+	text-align: center;
+	padding: 5px;
+}*/
+.h-100 {
+	padding: 5px;
+	text-align: center;
+	justify-content: center;
+	background: url("recursos/uptc.jpg");
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+.formulario {
+	background: rgb(255,255,245);
+	padding: 20px;
+}
+/*
+.ingresa {
+	background-color: azure;
+}
+
+.container {
+	background-color: lightyellow;
+	text-align: center;
+	justify-content: center;
+}
+form{
+	text-align: center;
+}
+*/

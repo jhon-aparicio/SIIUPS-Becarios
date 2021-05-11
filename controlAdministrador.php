@@ -103,7 +103,7 @@ class controlAdministrador {
     }
     public function mostrarI(){
         $db= Db::conectar();
-        $consulta="select * from Informe where Estado='Pendiente';";
+        $consulta="select * from Informe where Estado='Pendiente' order by id_B;";
         $respuesta= mysqli_query($db, $consulta);
         $informes=[];      
         while ($RQuery= mysqli_fetch_array($respuesta)){
@@ -120,7 +120,7 @@ class controlAdministrador {
     }
     public function nombresI(){
         $db= Db::conectar();
-        $consulta="SELECT B.Usuario as Usuario from Becario B INNER JOIN Informe I ON B.Codigo=I.id_B where I.Estado='Pendiente';";
+        $consulta="SELECT B.Usuario as Usuario from Becario B INNER JOIN Informe I ON B.Codigo=I.id_B where I.Estado='Pendiente' order by B.Codigo;";
         $respuesta= mysqli_query($db, $consulta);
         $nombres=[];
         while($RQuery= mysqli_fetch_array($respuesta)){
@@ -131,7 +131,7 @@ class controlAdministrador {
     }
     public function traerCodigos(){
         $db= Db::conectar();
-        $consulta="SELECT Codigo from Becario B INNER JOIN Informe I ON B.Codigo=I.id_B where I.Estado='Pendiente';";
+        $consulta="SELECT Codigo from Becario B INNER JOIN Informe I ON B.Codigo=I.id_B where I.Estado='Pendiente' order by B.Codigo;";
         $respuesta= mysqli_query($db, $consulta);
         $nombres=[];
         while($RQuery= mysqli_fetch_array($respuesta)){
@@ -146,7 +146,7 @@ class controlAdministrador {
         $nomDep=[];
         $tam= sizeof($lista);
         for($i=0; $i<$tam;$i++){
-            $consulta="SELECT id_dependencia as Nombre from Becario b where b.Codigo=$lista[$i];";
+            $consulta="SELECT id_dependencia as Nombre from Becario b where b.Codigo=$lista[$i] order by b.Codigo;";
             $respuesta= mysqli_query($db, $consulta);
             while($RQuery= mysqli_fetch_array($respuesta)){
               $nomDep[]=$RQuery['Nombre'];
